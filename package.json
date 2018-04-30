@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "cloudful is a more optimistic way of building services on fully managed cloud services (aka serverless)",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/cloudful-fx/cloudful",
   "author": "christopheranderson",
   "bin": {
     "cloudful": "./lib/src/main.js"
