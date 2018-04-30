@@ -1,0 +1,53 @@
+{
+  "name": "@cloudful/cloudful",
+  "version": "0.0.2",
+  "description": "cloudful is a more optimistic way of building services on fully managed cloud services (aka serverless)",
+  "license": "MIT",
+  "repository": "",
+  "author": "christopheranderson",
+  "bin": {
+    "cloudful": "./lib/src/main.js"
+  },
+  "keywords": [
+    "azure-functions",
+    "typescript"
+  ],
+  "files": [
+    "./lib"
+  ],
+  "main": "./lib/src/index.js",
+  "types": "./lib/src/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "build": "npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty && echo Done",
+    "test": "npm run build && mocha ./lib/test/"
+  },
+  "dependencies": {
+    "azure-functions-typescript": "github:christopheranderson/azure-functions-typescript",
+    "commander": "~2.9.0",
+    "debug": "~2.6.1",
+    "reflect-metadata": "^0.1.10",
+    "rimraf": "~2.5.4",
+    "winston": "~2.3.1"
+  },
+  "devDependencies": {
+    "@types/chai": "3.5.0",
+    "@types/commander": "~2.3.31",
+    "@types/debug": "0.0.29",
+    "@types/jsonwebtoken": "^7.2.3",
+    "@types/mocha": "2.2.41",
+    "@types/node": "^10.0.0",
+    "@types/rimraf": "0.0.28",
+    "@types/winston": "~2.2.0",
+    "chai": "~3.5.0",
+    "jsonwebtoken": "^8.0.1",
+    "mocha": "~3.0.0",
+    "ts-node": "^6.0.2",
+    "tslint": "^5.9.1",
+    "typescript": "2.8.3"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  }
+}

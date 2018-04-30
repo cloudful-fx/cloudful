@@ -1,0 +1,29 @@
+{
+  "name": "sample-azure-functions-ts",
+  "version": "0.0.1",
+  "description": "quick sample",
+  "license": "MIT",
+  "repository": "",
+  "author": "christopheranderson",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "build": "npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty && cloudful build ./lib/src/ --entryFile app.js && echo Done",
+    "pack": "npm run build && funcpack pack ./lib/src",
+    "start": "cd ./lib/src && func init . && func host start"
+  },
+  "dependencies": {
+    "azure-functions-typescript": "github:christopheranderson/azure-functions-typescript",
+    "@cloudful/cloudful": "file:../../."
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "core",
+    "azure-functions-pack": "*",
+    "ts-node": "~1.0.0",
+    "tslint": "~4.0.0",
+    "typescript": "~2.3.0"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  }
+}
