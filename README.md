@@ -20,7 +20,7 @@ export default host;
 
 ## Getting started
 
-See the (hello world sample)[./sample/hello] for a simple intro
+See the [hello world sample](./sample/hello) for a simple intro
 
 * package.json
 

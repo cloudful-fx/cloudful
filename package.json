@@ -1,6 +1,6 @@
 {
   "name": "@cloudful/cloudful",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "cloudful is a more optimistic way of building services on fully managed cloud services (aka serverless)",
   "license": "MIT",
   "repository": "",
